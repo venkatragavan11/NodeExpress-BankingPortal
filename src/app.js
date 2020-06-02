@@ -14,10 +14,6 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'Index'})
 });
 
-app.get('/profile', (req, res) => {
-  res.render('profile', {title: 'Profile'});
-});
-
 app.listen(3000, () => {
   console.log('App running on port 3000');
 })
