@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'Index'})
 });
 
-app.get('/profile', () => {
+app.get('/profile', (req, res) => {
   res.render('profile', {});
 });
 
