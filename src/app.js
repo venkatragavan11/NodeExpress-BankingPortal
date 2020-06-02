@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/profile', () => {
-  res.render('profile');
+  res.render('profile', {});
 });
 
 app.listen(3000, () => {
