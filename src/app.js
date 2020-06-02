@@ -16,7 +16,7 @@ const accountData = fs.readFileSync(
 const accounts = JSON.parse(accountData);
 
 const userData = fs.readFileSync(
-  path.join(__dirname, 'json', 'users.json'), 'utfs8'
+  path.join(__dirname, 'json', 'users.json'), 'utf8'
 )
 const users = JSON.parse(userData);
 
@@ -32,11 +32,11 @@ app.get('/savings', (req, res) => {
   res.render('account', { account: accounts.savings})
 })
 
-app.get('/savings', (req, res) => {
+app.get('/checking', (req, res) => {
   res.render('account', { account: accounts.checking})
 })
 
-app.get('/savings', (req, res) => {
+app.get('/credit', (req, res) => {
   res.render('account', { account: accounts.credit})
 })
 
